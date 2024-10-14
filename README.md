@@ -1,0 +1,1 @@
+This repository contains exercise sheets and solutions for the numerical parts of the exercises from the class on "Computational Material Sciences" taking place at Universität Hamburg in winter term 2024/2025.

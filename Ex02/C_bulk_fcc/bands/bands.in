@@ -1,0 +1,6 @@
+&bands
+   outdir  = 'tmp_dir'
+   prefix  = 'C_fcc'
+   filband = 'bands.out'
+/
+

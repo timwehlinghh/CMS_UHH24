@@ -1,0 +1,7 @@
+&dos
+   prefix  = 'C_fcc_16'
+   outdir  = 'tmp_dir'
+   bz_sum  = 'smearing'
+   degauss = 0.01
+/
+

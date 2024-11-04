@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --nodes 1
+#SBATCH --tasks-per-node 40
+#SBATCH --partition asterix-short
+#SBATCH --time 1:00:00
+
+module load quantum-espresso
+
+export SLURM_CPU_BIND=none
+
+cd $SLURM_SUBMIT_DIR
+
+mpirun -n 20 pw.x < scf.in > scf.out
+mpirun -n 20 pw.x < bscf.in > bscf.out
+mpirun -n 1  bands.x -i bands.in
+

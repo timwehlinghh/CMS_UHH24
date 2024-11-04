@@ -1,0 +1,29 @@
+&control
+   calculation  = 'nscf'
+   prefix       = 'C_fcc_16'
+   pseudo_dir   = '../pseudos/'
+   outdir       = 'tmp_dir'
+   verbosity    = 'high'
+/
+&system
+   ibrav     = 2
+   a         = 3.57
+   nat       = 2
+   ntyp      = 1
+   ecutwfc   = 90.0
+   nbnd      = 20
+/
+&electrons
+   conv_thr = 1.0e-10
+/
+
+ATOMIC_SPECIES
+   C  12.0  C.nc-PBE.UPF
+
+ATOMIC_POSITIONS (crystal)
+   C       0.00 0.00 0.00
+   C       0.25 0.25 0.25
+
+K_POINTS {automatic}
+ 16 16 16 0 0 0
+

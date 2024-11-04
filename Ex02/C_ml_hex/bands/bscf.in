@@ -1,0 +1,39 @@
+&control
+   calculation  = 'bands'
+   prefix       = 'C_hex'
+   pseudo_dir   = '../pseudos/'
+   outdir       = 'tmp_dir'
+   verbosity    = 'high'
+/
+&system
+   ibrav = 4
+   a     = 2.46
+   c     = 15.0
+
+   assume_isolated = '2D'
+
+   nat  = NNN
+   ntyp = 1
+
+   ecutwfc = 90.0
+
+   nbnd = 20
+/
+&electrons
+   conv_thr = 1.0e-10
+/
+
+ATOMIC_SPECIES
+   C  12.0  C.nc-PBE.UPF
+
+ATOMIC_POSITIONS (crystal)
+C                <coef of b1>        <coef of b2>        0.5000000000
+#...
+
+K_POINTS (crystal_b)
+   4
+   0.000  0.000  0.000  50 !! G
+   ?.???  ?.???  0.000  50 !! M
+   ?.???  ?.???  0.000  50 !! K
+   0.000  0.000  0.000   1 !! G
+

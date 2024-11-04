@@ -1,0 +1,34 @@
+&control
+   calculation  = 'bands'
+   prefix       = 'C_fcc'
+   pseudo_dir   = '../pseudos/'
+   outdir       = 'tmp_dir'
+   verbosity    = 'high'
+/
+&system
+   ibrav     = 2
+   A         = 3.57
+   nat       = 2
+   ntyp      = 1
+   ecutwfc   = 90.0
+   nbnd      = 20
+/
+&electrons
+   conv_thr = 1.0e-10
+/
+
+ATOMIC_SPECIES
+   C  12.0  C.nc-PBE.UPF
+
+ATOMIC_POSITIONS (crystal)
+   C       0.00 0.00 0.00
+   C       0.25 0.25 0.25
+
+K_POINTS (crystal_b)
+   5
+   ?.???  ?.???  ?.???  50 !! L
+   0.000  0.000  0.000  50 !! G
+   ?.???  ?.???  ?.???  50 !! X
+   ?.???  ?.???  ?.???  50 !! U
+   0.000  0.000  0.000   1 !! G
+

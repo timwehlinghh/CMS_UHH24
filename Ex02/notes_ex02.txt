@@ -1,0 +1,37 @@
+######
+# Connecting to studix
+######
+
+- ssh -X <physnet-nick>@login<N>.physnet.uni-hamburg.de (<physnet-nick> is your username; <N> between 1 and 4)
+- ssh -X studix<M> (<M> between 401 and 412; please distribute over all machines)
+
+######
+# Getting started with Quantum Espresso
+######
+
+- clone the git repository of the course: git clone https://github.com/timwehlinghh/CMS_UHH24.git
+- load Quantum Espresso: module load quantum-espresso/7.3.1-studix
+- cast module path to module bin into variable: QE_PATH=//opt/sw/quantum_espresso/7.3.1-studix/bin/
+  (Thanks for the reminder about // ;D )
+- call of executables via $QE_PATH/pw.x; bands.x and dos.x
+
+- run scf calcutions: $QE_PATH/pw.x < scf.in > scf.out &
+	- nscf.in and bscf.in can be run in the same way
+	- the bracket < defines the input file and > defines which file to write to
+- run bands extraction: $QE_PATH/bands.x < bands.in > bands.out
+- run DOS extraction: $QE_PATH/dos.x < dos.in > dos.out
+
+- data on the bands is for instance stored in files ending in .gnu as a two-column structure;
+  the first column repeats the distance in reciprocal space along the chosen k-path;
+  the second column contains the energies of the bands
+- data on the DOS is stored files ending in .dos with a header telling you that the columns contain
+  the energy, the DOS and the integrated DOS
+
+######
+# Analysis
+######
+- You are free to choose whether you want to analyse the data directly via execution of python
+  scripts or copy the necessary data to your PC locally
+
+
+mw

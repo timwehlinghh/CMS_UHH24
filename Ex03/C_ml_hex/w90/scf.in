@@ -1,0 +1,38 @@
+&control
+   calculation  = 'scf'
+   tprnfor      = .true.
+   prefix       = 'C_hex'
+   pseudo_dir   = '../pseudos/'
+   outdir       = 'tmp_dir'
+
+/
+&system
+   ibrav = 4
+   a     = 2.46
+   c     = 15.0
+
+   assume_isolated = '2D'
+
+   nat  = 2
+   ntyp = 1
+
+   ecutwfc = 90.0
+
+   occupations = 'smearing'
+   smearing    = 'fd'
+   degauss     = 1e-3
+/
+&electrons
+   conv_thr = 1.0e-10
+/
+
+ATOMIC_SPECIES
+   C  12.0  C.nc-PBE.UPF
+
+ATOMIC_POSITIONS (crystal)
+C                0.3333333333        0.6666666667        0.0000000000
+C                0.6666666667        0.3333333333        0.0000000000
+
+K_POINTS {automatic}
+ 24 24 1 0 0 0
+

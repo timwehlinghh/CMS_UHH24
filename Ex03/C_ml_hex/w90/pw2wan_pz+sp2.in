@@ -1,0 +1,7 @@
+&inputpp
+   outdir    = 'tmp_dir'
+   prefix    = 'C_hex'
+   seedname  = 'C_pz+sp2'
+!!   write_unk = .true.
+/
+

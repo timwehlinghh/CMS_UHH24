@@ -1,0 +1,10 @@
+This time around, in addition to pw.x for running (n)SCF calculations, you need pw2wannier90.x and wannier90.x
+Calculations need ...
+... a postprocessing of nSCF by Wannier90 (note that the file here has no extension)
+wannier90.x -pp C_<...> 
+... the calculation of M and A matrices
+pw2wannier90.x < pw2wann_<...>.in > pw2wann_<...>.out
+... the run of the Wannier construction
+wannier90.x C_<...>
+
+

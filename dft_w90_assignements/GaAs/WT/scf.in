@@ -1,0 +1,32 @@
+&control
+   calculation = 'vc-relax'
+   prefix      = 'GaAs'
+   pseudo_dir  = '../../pseudos'
+   outdir      = 'tmp_dir'
+   tprnfor     = .true.
+   tstress     = .true.
+/
+&system
+   ibrav = 4
+   a     = X.XXX
+   c     = X.XXX
+
+   nat  = 4
+   ntyp = 2
+
+   ecutwfc = XXX
+/
+&electrons
+   conv_thr=1.0e-10
+/
+ATOMIC_SPECIES
+  Ga  69.723   Ga.upf
+  As  74.922   As.upf
+ATOMIC_POSITIONS crystal
+  Ga  0.666666666667 0.333333333333  0.0000000000
+  As  0.666666666667 0.333333333333  0.3743428538
+  Ga  0.333333333333 0.666666666667  0.5000000000
+  As  0.333333333333 0.666666666667  0.8743428538 
+K_POINTS automatic
+ X X Y 0 0 0
+

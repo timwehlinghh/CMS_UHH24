@@ -1,0 +1,38 @@
+&control
+   calculation = 'scf'
+   prefix      = 'WSe2'
+   tprnfor     = .true.
+   pseudo_dir  = '../../pseudos'
+   outdir      = 'tmp_dir'
+/
+&system
+   ibrav = 4
+   nat   = XXX
+   ntyp  = XXX
+
+   assume_isolated = ???
+   a     = X.XXX
+   c     = X.XXX
+
+   ecutwfc = XXX
+
+   !! activate non-colinear calculation
+   !! define starting magnetization
+/
+&electrons
+   conv_thr =  1.0e-12
+/
+ATOMIC_SPECIES
+   Se    78.971   Se.upf
+    W   183.84    W.upf
+ATOMIC_POSITIONS (crystal)
+   Se               0.3333333333        0.6666666667        0.5558933691
+   W                0.6666666667        0.3333333333        0.5000000000
+   Se               0.3333333333        0.6666666667        0.4441066309
+K_POINTS {automatic}
+ X X 1 0 0 0
+
+
+
+
+

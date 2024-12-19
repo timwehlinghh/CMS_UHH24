@@ -1,0 +1,9 @@
+&projwfc
+   prefix  = 'Al2S2'
+   outdir  = 'tmp_dir'
+   DeltaE  = 0.05
+   ngauss  = 1
+   degauss = 0.02
+   filproj = 'pdos'
+/
+

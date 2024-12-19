@@ -1,0 +1,32 @@
+&control
+   calculation   = 'scf'
+   prefix        = 'Al2S2'
+   tprnfor       = .true.
+   pseudo_dir    = '../../pseudos/'
+   outdir        = 'tmp_dir'
+/
+&system
+   ibrav     = 4
+   a         = XXX
+   c         = 20.0
+   assume_isolated = '2D'
+
+   nat       = XXX
+   ntyp      = XXX
+
+   ecutwfc   = XXX
+/
+&electrons
+   conv_thr = 1.0e-10
+/
+ATOMIC_SPECIES
+ Al   27.0  Al.upf
+  S   32.0   S.upf
+ATOMIC_POSITIONS (crystal)
+Al               0.0000000000        0.0000000000        0.5643768801
+Al               0.0000000000        0.0000000000       -0.5643768801
+S                0.3333333330       -0.3333333330        0.6103988978
+S                0.3333333330       -0.3333333330       -0.6103988978
+K_POINTS {automatic}
+X X 1 0 0 0
+
